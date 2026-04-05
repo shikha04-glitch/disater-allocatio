@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f5f9;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #5c80cf, #1e40af);
+  color: white;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+/* Links container */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  background: #ffffff;
+  color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* GRID */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+  padding: 25px;
+}
+
+/* CARD */
+.dashboard-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* FULL WIDTH */
+.dashboard-card:nth-child(2),
+.dashboard-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  color: #64748b;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* BUTTON */
+button {
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* STATUS */
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.pending { background: #fef3c7; }
+.transit { background: #bae6fd; }
+.delivered { background: #bbf7d0; }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteer Dashboard</title>
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>Volunteer Dashboard</h2>
+  <div class="nav-links">
+    <a href="map.html?role=volunteer">View Map</a>
+    <a href="login.html">Logout</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- FORM CARD -->
+  <div class="card">
+    <h3>🚨 Report Disaster & Request Help</h3>
+
+    <div class="form-grid">
+
+      <input type="text" id="disasterType" placeholder="Disaster Type (Flood, Earthquake)">
+      <input type="text" id="areaName" placeholder="Location">
+
+      <input type="number" id="peopleCount" placeholder="People Affected">
+
+      <select id="urgency" onchange="setUrgencyColor()">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <input type="text" id="resourceType" placeholder="Resource Needed (Food, Water)">
+      <input type="number" id="resourceQty" placeholder="Quantity">
+
+    </div>
+
+    <button onclick="submitAll()">Submit Request</button>
+  </div>
+
+  <!-- TABLE CARD -->
+  <div class="card">
+    <h3>📊 Live Status</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Location</th>
+          <th>Severity</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="requestBody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="js/volunteer.js"></script>
+
+<script>
+window.onload = function(){
+  setUrgencyColor();
+  loadDisasters();
+}
+</script>
+
+</body>
+</html>

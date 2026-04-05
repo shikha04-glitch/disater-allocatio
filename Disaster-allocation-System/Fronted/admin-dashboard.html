@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>Disaster Management Admin</h2>
+  <div class="nav-links">
+    <a href="map.html?role=admin">View Map</a>
+    <a href="login.html">Logout</a>
+  </div>
+</div>
+
+<div class="dashboard-grid">
+
+  <!-- OVERVIEW -->
+<div class="dashboard-card">
+  <h3>Overview</h3>
+  <div id="overviewData"></div>
+</div>
+
+<!-- REQUEST TABLE -->
+<div class="dashboard-card">
+  <h3>Pending Requests</h3>
+  <table id="pendingRequests">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Quantity</th>
+        <th>Area</th>
+        <th>Requested By</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- TRACKING -->
+<div class="dashboard-card">
+  <h3>Tracking</h3>
+  <table id="trackingTable">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Quantity</th>
+        <th>Sent To</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+</div>
+
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>
